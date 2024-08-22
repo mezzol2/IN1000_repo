@@ -51,7 +51,7 @@ if (valg_hr == hr1 or valg_hr == hr2) and (valg_tb == tb2):
 
 #Check if user chose a vegetarian meal
 elif valg_hr == hr3 and valg_tb == tb1:
-    print("Du har valgt et vagetarmåltid.")
+    print("Du har valgt et vegetarmåltid.")
 
 #Display what the user selected
 else:

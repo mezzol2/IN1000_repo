@@ -25,4 +25,4 @@ elif svar == "nei":
 #Tell the user that the program doesn´t understand if they
 # wrote something else
 else:
-    print("Det forsto jeg ikke helt")
+    print("Det forsto jeg ikke helt.")
