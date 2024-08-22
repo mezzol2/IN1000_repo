@@ -36,6 +36,7 @@ if (valg_hr != hr1) and (valg_hr != hr2) and (valg_hr != hr3):
 
 print("Vennligst velg ett tilbehør.")
 valg_tb = input()
+#if the input is not a valid side dish, end the program
 if valg_tb != tb1 and valg_tb != tb2:
     print(f"{valg_tb} er ikke et gyldig tilbehør.")
     exit("Vennligst prøv på nytt.")
