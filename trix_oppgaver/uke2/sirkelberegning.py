@@ -1,4 +1,4 @@
-radius = float(input("Hva er radiusen? "))
+radius = float(input("Hva er radiusen?\n"))
 pi = 3.141593
 diameter = 2 * radius
 omkrents = diameter * pi
