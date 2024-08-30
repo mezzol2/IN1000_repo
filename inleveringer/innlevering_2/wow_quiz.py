@@ -18,7 +18,7 @@ name = str(input("What is your name?\n"))
 #Determine if a melee or ranged play style is better.
 print(f"\n{name}!  That's a fine name indeed.  One that will be spoken of in future legends.")
 print("Now, to determeine which class you should play, I will ask a series of questions.")
-print(f"\n{name}, do you prefer to in the (1) thick of the action, or to (2) fight at ranged?")
+print(f"\n{name}, do you prefer to (1) be in the thick of the action, or to (2) fight from range?")
 melee_ranged = int(input("Repond by entering one of the numbered responses (1 or 2): "))
 
 #Support or damage
@@ -100,9 +100,32 @@ elif dps_support == 1:
         else:
             error_mess()
 
+    #Here are the ranged damage dealers
     elif melee_ranged == 2:
-        error_mess()
-
+        #Isolate hunters as there are the only non-magical damage dealers
+        dmg_type = int(input('\nDo you to use (1) bows and guns or (2) magic? '))
+        if dmg_type == 1:
+            exit('\nAs a Hunter, you attack from range while sending your pet in to distract enemies.\n')
+        
+        #Determine what type of ranged magic user we have
+        elif dmg_type == 2:
+            print("\nWhat type of magic will you weild?")
+            wowclass = int(input("(1) Elemental, (2) Nature, (3) Demonic, (4) Shadow, (5) Draconic, or (6) or are you a book nerd?"))
+            #Recommend to the user a class
+            if wowclass == 1:
+                exit('\nAs an Elemental Shaman, you hurl the power of Earth, Wind, Fire and Water at your foes.\n')
+            elif wowclass == 2:
+                exit('\nAs a Balance Druic, you call upon the power of nature to "restore balance" in your foes.\n')
+            elif wowclass == 3:
+                exit('\nAs a Warlock, you enslave demons to your will and hurl destruction at your enemies.\n')
+            elif wowclass == 4:
+                exit('\nAs a Shadow Priest, you are have turned your back on the Light to reach your full potention within the Darkness...\n')
+            elif wowclass == 5:
+                exit('\nAs a Devesation Evoker, you use the fire of dragons against your enemies.\n')
+            elif wowclass ==6:
+                exit('\nAs a Mage, you have studied for years to master the power of the arcane.\n')
+            else:
+                error_mess()
     else:
         error_mess()
 
