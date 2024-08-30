@@ -53,8 +53,59 @@ if dps_support == 2:
             elif heal_ranged == 3:
                 exit("\nYou shall be one with nature.  Embrace the path of a Druid.\n")
             elif heal_ranged == 4:
-                exit("\nßYour will heal the world with your totems.  You are a Shaman of the elements.\n")
+                exit("\nYour will heal the world with your totems.  You are a Shaman of the elements.\n")
             else:
                 error_mess()
     else:
         error_mess()
+    
+#This user wants to be a damage dealer.
+elif dps_support == 1:
+    #Seperate dps into melee and ranged
+    if melee_ranged == 1:
+        #melee damage need to be seperated into physical and magical
+        dmg_type = int(input("\nWill you (1) use your own strength or (2) be magically aided? "))
+        if dmg_type == 1:
+            #Determine if the user will be a Warrior, Rogue, or Monk
+            wowclass = int(input("\nAre you (1) honoable, (2) sneaky, (3) a hermit? "))
+            #Tell the user what class they snould play
+            if wowclass == 1:
+                exit("\nBlood and Honor.  As a Warrior, you shall be a master of arms.\n")
+            elif wowclass == 2:
+                exit("\nAs a Rogue, you will sneak and suprise your enemies from the shadows.\n")
+            elif wowclass == 3:
+                exit("\nYou emerge from meditation to face the world as a Monk.\n")
+            else:
+                error_mess()
+
+        #Here are magical, melee damage dealers
+        elif dmg_type ==2:
+            #Determine if the user will be a Enhancement Shaman, Cat Druid, Demon Hunter, Paladin, or DeathKnight
+            print("\nWhat type of magic will you weild?")
+            wowclass = int(input("(1) Elemental, (2) Nature, (3) Demonic, (4) the Holy Light, or (5) Necrotic"))
+            #Tell the user what they should play
+            if wowclass == 1:
+                exit("\nAs a Shaman, the power of the Elements surges through you, emboldening your attacks.\n")
+            elif wowclass == 2:
+                exit("\nAs a Druid of the Claw, you shapeshift into animal forms to face your foes.\n")
+            elif wowclass == 3:
+                exit("\nAs a Demon Hunter, you use the power of demons to slaughter the demons.\n")
+            elif wowclass == 4:
+                exit("\nAs a Paladin, you call upon the Light to face those who would bring the world to ruin.\n")
+            elif wowclass ==5:
+                exit("\nAs a Death Knight, you wield the power of undeath to obliterate all who stand in your path.\n")
+            else:
+                error_mess()
+        
+        else:
+            error_mess()
+
+    elif melee_ranged == 2:
+        error_mess()
+
+    else:
+        error_mess()
+
+
+else:
+    error_mess()
