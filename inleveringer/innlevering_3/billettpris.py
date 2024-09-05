@@ -24,3 +24,6 @@ def get_age():
 
 #Call the function
 get_age()
+
+#One issue with this function as written is that it will accept negative numbers.
+#An better version of this fucntion would give the user an error if they type in an negative age.
