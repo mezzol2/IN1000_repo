@@ -23,13 +23,13 @@ def show_words():
 #Greet the user
 print("\nHello, human.  Welcome to the cat translator.")
 #Ask the user if the need to see known cat words
-inp = input("Do you need to see the list of translatable cat words?\n[y/n] ")
+inp = input("Do you need to see the list of translatable cat words?\n[y/n] ").lower()
 #Show the user the list if they want it
 if inp == 'y':
     show_words()
 
 #Ask the user if they want to translate a word
-inp = input("Would you like to translate a cat word?\n[y/n?] ")
+inp = input("\nWould you like to translate a cat word?\n[y/n?] ").lower()
 #If the user wants a translation, ask them for a word
 if inp == 'y':
     inp = input("\nWhat word do you need translated: ")
@@ -43,7 +43,7 @@ if inp == 'y':
 
 #If the user does not want a translation, send them on their way    
 elif inp == 'n':
-    print("Guess you speak fluent cat already. BYE.\n")
+    print("\nGuess you speak fluent cat already. BYE.\n")
 
 #If the user gave an invalid reponse, mock them
 else:
