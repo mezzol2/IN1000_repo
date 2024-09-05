@@ -35,11 +35,11 @@ if inp == 'y':
     inp = input("\nWhat word do you need translated: ")
     #If the user's word is in the cat_word dictionary, print the translation
     if inp in cat_words:
-        print(f'\n{cat_words[inp]}\n')
+        print(f'\n"{inp}" means "{cat_words[inp]}"\n')
     
     #If the user's word is not in cat_word, tell the user
     else:
-        print("That word is not in the dictionary. Please try again.")
+        print("\nThat word is not in the dictionary. Please try again.")
 
 #If the user does not want a translation, send them on their way    
 elif inp == 'n':
@@ -47,4 +47,4 @@ elif inp == 'n':
 
 #If the user gave an invalid reponse, mock them
 else:
-    print("It's a yes or no question. Why are you making this hard?\n")
+    print("\nIt's a yes or no question. Why are you making this hard?\n")
