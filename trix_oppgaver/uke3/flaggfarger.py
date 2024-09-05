@@ -1,7 +1,17 @@
 def return_flagg():
     land = input('Skriv inn et land: ').lower()
-    farger = flaggOrdbok[land]
-    print(farger)
+    sjekk = input('Hvilken farge vil du sjekke: ').lower()
+
+    if land in flaggOrdbok:
+        farger = flaggOrdbok[land]
+        print(farger)
+        if sjekk in farger:
+            print(f'{sjekk} er i {land}s flagg')
+        else:
+            print(f'{sjekk} er ikke i {land}s flagg')    
+
+
+
 
 flaggOrdbok = {"norge" : ["rødt", "hvitt", "blått"], 
                "sverige" : ["blått", "gult"],
