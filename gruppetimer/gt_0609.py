@@ -28,3 +28,14 @@ koffert = [
 
 bil = [koffert, "random shit"]
 print(bil)
+
+
+brukere = {}
+brukere["hanjo"] = "Hanne Johnsen"
+brukere["karsi"] = "Kari Sirisen"
+brukere["olha"] = "Ole Hansen"
+
+print(brukere)
+
+brukere["karsi"] = "Kari Marie Sirisen"
+print(brukere)
