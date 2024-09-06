@@ -7,7 +7,9 @@ def monty_hall():
     bil = random.randint(0,2)
 
     #ask the user which door they will open
-    inp = int(input("Hvilken dør vil du åpne? Dør 0, 1, eller 2?\n"))
+    #inp = int(input("Hvilken dør vil du åpne? Dør 0, 1, eller 2?\n"))
+    #hardcode the user's input to always 0
+    inp = 0
 
     #define of set of bil and inp
     chosen_set = {bil, inp}
@@ -40,14 +42,15 @@ def monty_hall():
     list_doors.remove(dør_åpnes)
 
     #ask the contestant if they will change doors
-    inp2 = input(f'Du har valgt dør {inp}. Verten åpner dør {dør_åpnes} å vise en geit. Vil du åpne dør {list_doors[0]}?\nja/nei? ').lower()   
-
+    #inp2 = input(f'Du har valgt dør {inp}. Verten åpner dør {dør_åpnes} å vise en geit. Vil du åpne dør {list_doors[0]}?\nja/nei? ').lower()   
+    #hardcode for the user to always stay with the same door
+    inp2 = "nei"
 
     def ending():
         if inp == bil:
             print(f"Verten åpner dør {inp}, og det finnes en bil bak.  Gratulerer! Du vinner!")
         else:
-            print(f"Verten åpnder dør {inp}, og det finnes en geit.  Bah!")
+            print(f"Verten åpner dør {inp}, og det finnes en geit.  Bah!")
 
     #show the contestant their prize
     if inp2 == "ja":
@@ -56,6 +59,6 @@ def monty_hall():
     elif inp2 == "nei":
         ending()
     else:
-        print('Vett ikke hva du skrve.  Prøv på nytt.')
+        print('Vett ikke hva du skrev.  Prøv på nytt.')
 
 monty_hall()
