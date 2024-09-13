@@ -47,8 +47,8 @@ def make_string(dictionary):
     dict_list = list(dictionary.keys())
     dict_string = ''
     for i in range(len(dict_list)-1):
-        dict_string += f" {dict_list[i]},"
-    dict_string = f"{dict_string} and {dict_list[len(dict_list) - 1]}"
+        dict_string += f"{i}. {dict_list[i]}, "
+    dict_string = f"{dict_string}and {len(dict_list) - 1}. {dict_list[len(dict_list) - 1]}"
     print(dict_string)
     print(f"Please make your selection by typing a number from 0 to {len(dict_list)-1}.")
         
@@ -66,7 +66,7 @@ selections.append(bread_list[inp])
 
 #Tell the user which bread they have chosen, and prompt them to choose cheeses
 print(f"You have chosen {selections[0]}.")
-print("Your cheese options are:")
+print("\nYour cheese options are:")
 make_string(cheeses)
 #Store the users choice
 inp = int(input())
@@ -83,13 +83,16 @@ while more:
         inp = int(input())
         selections.append(cheese_list[inp])
         print(f"You have chosen {cheese_list[inp]}.")
+        #End the loop if the user does not want cheese, even though they are wrong
+        if inp == len(cheese_list) - 1:
+            more = False
     elif inp == 'n':
         more = False
     else:
         print("Your input was not understood.")
 
 #Ask the user for protein choices.
-print("Your protein options are:")
+print("\nYour protein options are:")
 make_string(proteins)
 #Store the users choice
 inp = int(input())
@@ -106,13 +109,16 @@ while more:
         inp = int(input())
         selections.append(protein_list[inp])
         print(f"You have chosen {protein_list[inp]}.")
+        #End the loop if the user chooses no protein
+        if inp == len(protein_list) - 1:
+            more = False
     elif inp == 'n':
         more = False
     else:
         print("Your input was not understood.")
 
 #Ask the user for topping choices.
-print("Your topping options are:")
+print("\nYour topping options are:")
 make_string(toppings)
 #Store the users choice
 inp = int(input())
@@ -129,6 +135,8 @@ while more:
         inp = int(input())
         selections.append(topping_list[inp])
         print(f"You have chosen {topping_list[inp]}.")
+        if inp == len(cheese_list) - 1:
+            more = False
     elif inp == 'n':
         more = False
     else:
@@ -153,7 +161,7 @@ score /= len(selections)
 string = ""
 for i in range(len(selections)-1):
     string += f" {selections[i]},"
-print(f"You have built a sandwich with {string} and {selections[len(selections)-1]}.")
+print(f"You have built a sandwich with{string} and {selections[len(selections)-1]}.")
 
 #Tell the user their score
-print(f'Your sandwich score is {score:.2f}.')
+print(f'\nYour sandwich score is {score:.2f}.\n')
