@@ -12,3 +12,17 @@ for both_text in name_age:
 
 
 print(oldest)
+
+
+def pris(gratis, alder1):
+    if gratis == True:
+        svar =  0
+    elif alder1 < 18:
+        svar = 100
+    else:
+        svar = 200
+    
+    return svar
+
+print(pris(False, 2))
+        
