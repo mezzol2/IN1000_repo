@@ -12,8 +12,6 @@ def invert_matrix(matrix1):
     return matrix2
 
 
-
-
 matriseEn = [
     [1, 4, 7],
     [2, 5, 8],
