@@ -29,3 +29,16 @@ def divisjon(a,b):
 assert divisjon(100, 20) == 5
 assert divisjon(100,-20) == -5
 assert divisjon(-100, -20) == 5
+
+
+#Define a function that converts inches (tommer) to centimeters
+def tommer_til_cm(antall_tommer):
+    #Check that antall_tommer is larger than 0
+    assert antall_tommer > 0
+    #Convert inches to centimeters
+    cm = antall_tommer * 2.54
+    #Return centimeters
+    return cm
+
+#Test the tommer_til_cm function
+assert tommer_til_cm(1) == 2.54
