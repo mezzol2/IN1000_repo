@@ -1,3 +1,7 @@
+#This program will the user for a sentence.  It will then print the frequency and
+# length of each word in that sentence.
+
+
 #This function takes a word as input and return the number of letters in the word
 def count_letters(word):
    
