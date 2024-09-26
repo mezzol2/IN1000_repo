@@ -84,5 +84,5 @@ initial_prompt()
 #Load the garden_reference file
 gard_dict = load_reference('garden_reference.txt')
 
-#Ask the user when items they have, and give them a score
+#Ask the user what items they have, and give them a score
 calculate_rating(gard_dict)
