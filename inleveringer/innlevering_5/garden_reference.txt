@@ -2,9 +2,9 @@ grass,3
 rocks,5
 trees,10
 gnomes,10
-dog house,7
-dog,10
-water feature,6
+a dog house,7
+a dog,10
+a water feature,6
 native plants,8
 flowers,7
 vegetables,7
@@ -12,4 +12,4 @@ children,1
 ant hills,3
 trash,0
 invasive species,0
-bird feeder,9
+a bird feeder,9
