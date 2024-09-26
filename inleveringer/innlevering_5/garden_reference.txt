@@ -1,0 +1,6 @@
+grass,5
+rocks,9
+trees,10
+gnomes,10
+dog house,5
+moonwell,10
