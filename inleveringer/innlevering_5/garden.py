@@ -40,6 +40,16 @@ def initial_prompt():
     #If the user has a garden, proceed
     print("\nGreat to hear that you have a garden.  Let's proceed.")
 
+
+#Define a function that give the user feedback on their garden score
+def suck_status(score):
+    #Use if-statement to catagorize scores
+    if score < 5:
+        print("Your garden sucks.  Try better.\n")
+    elif score < 8:
+        print("Your garden does not suck, but has room for improvement.\n")
+    else:
+        print("Wow, your garden is amazing. Good job! :D\n")
         
 #Define a function that aks the user what is in their garden, and then gives them a rating
 def calculate_rating(gard_dict):
@@ -75,7 +85,9 @@ def calculate_rating(gard_dict):
     #Convert score into an average
     score /= len(user_list)
 
-    print(f"\nBased on your responses, your garden rates {score:.1f} out of 10.0.\n")
+    #Give the user feedback on their garden
+    print(f"\nBased on your responses, your garden rates {score:.1f} out of 10.0.")
+    suck_status(score)
         
 
 #Run the initial prompt for the user
