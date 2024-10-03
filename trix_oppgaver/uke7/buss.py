@@ -16,14 +16,14 @@ class Buss:
             return False
     
     def plukk_opp(self):
-        if Buss.er_full():
+        if self.er_full():
             print("The bus is full and cannot accept another passenger.")
         else:
             self._passengers += 1
             print(f"1 more passanger gets on the bus. There are now {self._passengers} passengers on board.")
     
     def slipp_av(self):
-        if Buss.er_tom():
+        if self.er_tom():
             print("The bus is empty.")
         else:
             self._passengers -= 1
