@@ -1,0 +1,11 @@
+1.  Encapsulation is the idea that a main program only has access to certain public data from a subprogram, and that
+    the details of the subprogram are private and completely hidden from the main program.  This is useful as it
+    hides some complexity that the programmer does not need to think about all the time, and segments programs into
+    more managable, "bite-sized" parts.
+
+2.  The public interface of a class in Python are the methods and values of that class.  These methods and values can
+    be called in the main program as they are public.  The implementation of a class is the building and defining of
+    the class's methods and values, and this data is private and hidden from the main program.
+
+3.  Instance methods are tied to specific user-defined classes and can only be called in reference to an instance of
+    that class.  The functions we have used previously were more general and not tied to a specific class.
