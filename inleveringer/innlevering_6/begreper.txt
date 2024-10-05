@@ -1,0 +1,7 @@
+A. Class definition: lines 1 to 16
+B. Creation of a new object: line 19
+C. Definition of an instance variable: line 3
+D. Definition of an instance method: lines 7 to 9 
+E. Definition of a constructor: lines 2 to 5
+F. Calling an instance method: line 21
+G. Arguments: line 19
