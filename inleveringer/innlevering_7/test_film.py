@@ -41,8 +41,12 @@ def test_film():
 
     # hent_alle_skuespiller_navn
     # Skriv ut skuespillernes navn for den filmen som har to
-    # print("Henter og skriver ut alle skuespillernavn for en film:")
+    print("Henter og skriver ut alle skuespillernavn for en film:")
     # <fyll ut og fjern # på print-setningen>
+    actor_list = movie1.hent_skuespiller_navn()
+    print(f"\nSkuespillere i {movie1._tittel}:")
+    for actor in actor_list:
+        print(actor)
 
     # sjekk_periode
     # Sjekk om en film du har lagt inn er i en periode du velger
