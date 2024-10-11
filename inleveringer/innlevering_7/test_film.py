@@ -47,21 +47,25 @@ def test_film():
     print(f"\nSkuespillere i {movie1._tittel}:")
     for actor in actor_list:
         print(actor)
+    print()
 
     # sjekk_periode
     # Sjekk om en film du har lagt inn er i en periode du velger
     # (velg periode som skal gi True og sjekk at dette blir resultatet)
-    # print ("Sjekker at en film er i oppgitt periode")
+    print ("Sjekker at en film er i oppgitt periode")
     # <fyll ut og fjern # på print-setningen>
+    assert movie1.sjekk_periode(1995, 2005)
 
     # Sjekk om en film er i en periode som skal gi False
     # (velg samme årstall til begge argumenter og sjekk resultat er False)
-    # print ("Sjekker at en film ikke kan være produsert før og etter samme år")
+    print ("Sjekker at en film ikke kan være produsert før og etter samme år")
     # <fyll ut og fjern # på print-setningen>
+    assert not movie1.sjekk_periode(1999,1999)
 
     # sjekk_tittel
     # Sjekk om en film har en tittel som starter på en streng som du selv velger
-    # print ("Sjekker om starten på en films tittel kjennes igjen")
+    print ("Sjekker om starten på en films tittel kjennes igjen")
     # <fyll ut og fjern # på print-setningen>
+    assert movie1.sjekk_tittel("Fight")
 
 test_film()

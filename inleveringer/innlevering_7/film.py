@@ -44,3 +44,27 @@ class Film:
             #Print the actor and their role using a loop
             for actor in actor_list:
                 print(f"{actor} som {self._skuespillere[actor]}")
+    
+    #Check is a movie was released between 2 given years
+    def sjekk_periode(self, år_1:int, år_2:int):
+        if (self._år > år_1) and (self._år < år_2):
+            return True
+        else:
+            return False
+    
+    #Check if a string is the same as the beginning of the film title
+    def sjekk_tittel(self, tittel_start:str):
+        #If tittel_start is an empty string, return True
+        if tittel_start == "":
+            return True
+        #If tittel_start is longer than the film title, return False
+        elif len(tittel_start) > len(self._tittel):
+            return False
+        #Check if the beginning of the string is the beginning of the title
+        else:
+            for i in range(len(tittel_start)):
+                #Return False if there is a mismatch
+                if tittel_start[i] != self._tittel[i]:
+                    return False
+            #Return True if no mismatch is found
+            return True
