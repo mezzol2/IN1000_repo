@@ -45,3 +45,11 @@ class Filmklubb:
         movie = Film(inp1,inp2)
         self._filmer.append(movie)
    
+    #Define a method that searches for a film title or the start of the film title
+    def finn_film_tittel(self, tittel:str):
+        #Iterate through the list of films and check for a match
+        for movie in self._filmer:
+            if movie.sjekk_tittel(tittel):
+                return movie._tittel
+        #If there is no match, return None
+        return None

@@ -40,10 +40,11 @@ def testprogram():
 
 
     # finn_film_tittel
-    # print("Leter etter film med (start på) usannsynlig tittel")
+    print("Leter etter film med (start på) usannsynlig tittel")
     # Kall på metoden med et argument som ingen titler starter med
     # Bruk print eller assert for å sjekke at resultatet er som forventet
     # <fyll ut og fjern # på print-setningen>
+    assert club.finn_film_tittel("Good Boys") is None
     print()
 
     # print("Leter etter film med (start på) tittel 'Hidden '")
