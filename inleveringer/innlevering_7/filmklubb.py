@@ -50,6 +50,29 @@ class Filmklubb:
         #Iterate through the list of films and check for a match
         for movie in self._filmer:
             if movie.sjekk_tittel(tittel):
-                return movie._tittel
+                return movie
         #If there is no match, return None
         return None
+    
+    #Define a function that adds actors to films
+    def legg_til_skuespiller(self, film):
+        #Define a boolean variable that detemines whether the user wants to add
+        # another actor
+        add_actor = True
+
+        #Define a loop to add more actors
+        while add_actor:
+            #Ask the user if they want to add an actor
+            inp = input(f"Vil du legge til en skuespiller til {film.hent_tittel()}?\n[j/n]: ").lower()
+            #Check if the user's input is valid
+            while inp not in ['j','n']:
+                print("Det svaret er ugyldig.")
+                inp = input("Skriv 'j' for ja eller 'n' for nei:  ").lower()
+            #End the loop if the user does not want to continue
+            if inp == 'n':
+                add_actor = False
+            #Add an actor if the user want to continue
+            else:
+                navn = input("Navn: ")
+                rolle = input("Rolle: ")
+                film.ny_skuespiller(navn,rolle)

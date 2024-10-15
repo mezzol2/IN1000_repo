@@ -47,20 +47,24 @@ def testprogram():
     assert club.finn_film_tittel("Good Boys") is None
     print()
 
-    # print("Leter etter film med (start på) tittel 'Hidden '")
+    print("Leter etter film med (start på) tittel 'Hidden '")
     # Kall på metoden med argument "Hidden "
     # Bruk print eller assert for å sjekke at resultatet er som forventet
     # <fyll ut og fjern # på print-setningen>
+    print(club.finn_film_tittel("Hidden "))
     print()
 
     # legg_til_skuespillere
-    # print("Legg til skuespillere for en film" )
+    print("Legg til skuespillere for en film" )
     # kall metoden på film-objektet du fikk returnert fra finn_film_tittel
     # (navn og rolle for to skuespillere du velger selv leses fra terminal)
     # <fyll ut og fjern # på print-setningen>
+    film1 = club.finn_film_tittel("Hidden ")
+    club.legg_til_skuespiller(film1)
     print()
     # SKriv ut all info om alle filmer og sjekk at resultatet er som forventet
     # <fyll ut>
+    film1.skriv_ut_film()
     print()
 
     # finn_film_periode

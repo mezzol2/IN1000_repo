@@ -68,3 +68,22 @@ class Film:
                     return False
             #Return True if no mismatch is found
             return True
+    
+    #Define a string that returns all the info on the film
+    def __str__(self):
+        #Retrieve the list of actors
+        actor_list = self.hent_skuespiller_navn()
+        #Check if actor_list is empty
+        if actor_list == []:
+            #If no actors have been added, return just the film's name and it's year
+             return f"\n{self._tittel}({self._år})."
+        
+        #Otherwise return title, year, actors, and their roles
+        else:
+            #Define the first line of the output
+            output = f"\n{self._tittel}({self._år}). Medvirkende:"
+            #Add actors and their roles using a loop
+            for actor in actor_list:
+                output += f"\n{actor} som {self._skuespillere[actor]}"
+            #Return the output string
+            return output
