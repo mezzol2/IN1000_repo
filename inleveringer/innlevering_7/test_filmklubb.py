@@ -69,17 +69,20 @@ def testprogram():
 
     # finn_film_periode
     # Kall på metoden med argumentene etter=2000 og før=2024
-    # print("Leter ett filmer produsert etter 2000 og før 2024:")
+    print("Leter ett filmer produsert etter 2000 og før 2024:")
     # Skriv ut titlene på filmer som returneres (bruk hent_tittel).
     # Kontroller at resultatene er som forventet
     # <fyll ut og fjern # på print-setningen>
+    filmer_i_periode = club.finn_filmer_periode(2000,2024)
+    for movie in filmer_i_periode:
+        print(movie.hent_tittel())
     print()
 
     # Kall på finn_film_periode med argumentene etter=2020 og før=2020
-    # print("Leter etter filmer produsert etter 2020 og før 2020:")
+    print("Leter etter filmer produsert etter 2020 og før 2020:")
     # Kontroller at resultatet er som forventet (tom liste) med assert (evt skriv ut)
     # <fyll ut og fjern # på print-setningen>
-
+    assert club.finn_filmer_periode(2020,2020) == []
 
     # SKriv ut all info om alle filmer og sjekk at resultatet er som forventet
     # <fyll ut>
