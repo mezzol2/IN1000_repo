@@ -69,7 +69,7 @@ def testprogram():
 
     # finn_film_periode
     # Kall på metoden med argumentene etter=2000 og før=2024
-    print("Leter ett filmer produsert etter 2000 og før 2024:")
+    print("Leter etter filmer produsert etter 2000 og før 2024:")
     # Skriv ut titlene på filmer som returneres (bruk hent_tittel).
     # Kontroller at resultatene er som forventet
     # <fyll ut og fjern # på print-setningen>
@@ -86,5 +86,6 @@ def testprogram():
 
     # SKriv ut all info om alle filmer og sjekk at resultatet er som forventet
     # <fyll ut>
+    club.skriv_ut_alle_filmer()
 
 testprogram()
