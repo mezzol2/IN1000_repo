@@ -4,7 +4,7 @@ class Side:
         self._color = color
     
     def get_length(self):
-        self.__length
+        return self.__length
     
     def get_color(self):
-        self._color
+        return self._color
