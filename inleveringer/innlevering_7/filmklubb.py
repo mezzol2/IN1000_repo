@@ -71,8 +71,21 @@ class Filmklubb:
             #End the loop if the user does not want to continue
             if inp == 'n':
                 add_actor = False
-            #Add an actor if the user want to continue
+            #Add an actor if the user wants to continue
             else:
                 navn = input("Navn: ")
                 rolle = input("Rolle: ")
                 film.ny_skuespiller(navn,rolle)
+    
+
+    #Define a method that finds films from a given time period
+    def finn_filmer_periode(self, år_1:int, år_2:int):
+        #Create an empty list to contain the movies from the given period
+        period_films = []
+        #For each film in the list, check whether it is in the given year range
+        for movie in self._filmer:
+            if movie.sjekk_periode(år_1, år_2):
+                #Add the film to the list if it is within the year range
+                period_films.append(movie)
+        
+        return period_films
