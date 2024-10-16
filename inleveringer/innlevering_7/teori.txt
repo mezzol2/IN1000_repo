@@ -1,0 +1,4 @@
+1b) Uploading the files though a method adds extra flexibility to the program as it potentially lets the user upload multiple files.
+
+1c) The år (year) variable could be saved as a string, however, the variable would need to be converted to an integer in order to perform
+    the sjekk_periode and finn_filmer_periode methods.
