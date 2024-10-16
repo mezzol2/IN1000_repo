@@ -2,10 +2,10 @@ from side import Side
 
 class Firkant:
     def __init__(self):
-        self._top is None
-        self._right is None
-        self._bottom is None
-        self._left is None
+        self._top = None
+        self._right = None
+        self._bottom = None
+        self._left = None
     
     def legg_til_side(self, side, location:str):
         location = location.lower()
