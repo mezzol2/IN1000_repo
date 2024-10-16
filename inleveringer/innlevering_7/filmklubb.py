@@ -42,6 +42,8 @@ class Filmklubb:
             print("Året er ugyldig.")
             print("År må ha 4 siffere og innholder bare tall.")
             inp2 = input("År: ")
+        #Make the year an integer
+        inp2 = int(inp2)
         movie = Film(inp1,inp2)
         self._filmer.append(movie)
    
