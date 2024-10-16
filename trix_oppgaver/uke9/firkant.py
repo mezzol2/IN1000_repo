@@ -21,13 +21,13 @@ class Firkant:
     def fjern_side(self, location:str):
         location = location.lower()
         if location == 'l':
-            self._left is None
+            self._left = None
         elif location == 'r':
-            self._right is None
+            self._right = None
         elif location == 't':
-            self._top is None
+            self._top = None
         elif location == 'b':
-            self._bottom is None
+            self._bottom = None
     
     def er_fullstendig(self):
         if (self._left is not None) and (self._right is not None):

@@ -20,4 +20,7 @@ def main():
 
     assert box.er_fullstendig()
 
+    box.fjern_side('l')
+    assert not box.er_fullstendig()
+
 main()
