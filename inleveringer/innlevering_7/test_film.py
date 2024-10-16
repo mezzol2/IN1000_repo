@@ -68,4 +68,11 @@ def test_film():
     # <fyll ut og fjern # på print-setningen>
     assert movie1.sjekk_tittel("Fight")
 
+    # __str__
+    # Skriv ut film-objekt med print
+    print("Skriver ut en film med print (test av __str__)")
+    # <fyll ut og fjern # på print-setningen>
+    print(movie1.__str__())
+    print()
+
 test_film()
