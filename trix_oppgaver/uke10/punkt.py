@@ -7,7 +7,7 @@ class Punkt:
         self._z = z
 
     def __str__(self):
-        return f"Coordinates: {self._x}, {self._y}, {self._z}"
+        return f"{self._x},{self._y},{self._z}"
     
     def faaAvstand(self, other):
         avstand = sqrt((other._x - self._x)**2 + (other._y - self._y)**2 + (other._z - self._z)**2)
