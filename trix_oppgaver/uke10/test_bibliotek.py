@@ -26,6 +26,9 @@ def main():
 
     my_library.leggTilBokIBibliotek(bok6)
     print(my_library.finnBokIBibliotek("Def a real book", 2025))
+
+    print()
+    print(my_library)
     
 
 

@@ -33,4 +33,9 @@ class Bibliotek:
             ledigBokhylle = self.utvidBibliotek()
 
         ledigBokhylle.legg_til_bok(book)
-                
+               
+    def __str__(self):
+        shelf_string = ""
+        for shelf in self._bokhylle_list:
+            shelf_string += f"{shelf}"
+        return shelf_string

@@ -24,3 +24,9 @@ class Bokhylle:
                 return book
 
         return False
+    
+    def __str__(self):
+        book_string = ""
+        for book in self._book_list:
+            book_string += f"{book.hent_tittel()}\n"
+        return book_string
