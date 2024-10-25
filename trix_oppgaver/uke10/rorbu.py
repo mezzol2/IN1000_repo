@@ -1,3 +1,5 @@
+from gjest import Gjest
+
 class Rorbu:
     def __init__(self):
         self._gjester = []
