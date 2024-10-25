@@ -22,5 +22,5 @@ class Bokhylle:
         for book in self._book_list:
             if (book.hent_tittel() == title) and (book.hent_utgivelseaar() == year):
                 return book
-            else:
-                return False
+
+        return False
