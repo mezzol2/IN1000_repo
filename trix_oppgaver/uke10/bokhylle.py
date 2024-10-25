@@ -1,7 +1,7 @@
 from bok import Bok
 
 class Bokhylle:
-    def __init__(self, max_books:int, book_list):
+    def __init__(self, max_books:int, book_list:list):
         self._max_books = max_books
         self._book_list = book_list
     
