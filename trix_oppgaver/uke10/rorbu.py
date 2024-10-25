@@ -29,3 +29,6 @@ class Rorbu:
             print("Dette var artig!")
         else:
             print("Dra på Lopphavet - bi dæ godtar no så gyt e!")
+
+    def hentAntallGjester(self):
+        return len(self._gjester)
