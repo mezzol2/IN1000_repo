@@ -10,7 +10,9 @@ class Brev:
     def les_brev(self):
         print(f"Hei, {self._mottaker}!\n")
         
-        pass
+        for line in self._innhold:
+            print(f"{line}")
 
+        print(f"\nHilsen fra\n{self._avsender}")
 
     
