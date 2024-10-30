@@ -22,7 +22,7 @@ class Person:
         return self._navn
     
     def endre_adresse(self, adresse:str):
-        self._adresse = navn
+        self._adresse = adresse
 
     def hent_adresse(self):
         return self._adresse
