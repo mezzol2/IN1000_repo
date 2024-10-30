@@ -8,3 +8,6 @@ class Dag:
     
     def get_nedbørtall(self):
         return self._nedbørtall
+    
+    def __str__(self):
+        return f"{self._dato} : {self._nedbørtall} mm"
