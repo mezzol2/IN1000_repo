@@ -27,6 +27,13 @@ def maksdag(dag_liste:list):
     
     return maks_dag
 
+def til_sammen(dag_list:list):
+    total_regn = 0
+    for dag in dag_list:
+        total_regn += dag.get_nedbørtall()
+    
+    return total_regn
+
 
 def main():
     filename = "Nedbørsmengder.txt"
@@ -37,5 +44,8 @@ def main():
     
     most_rainy_day = maksdag(daglig_data)
     print(most_rainy_day)
+
+    total_regn = til_sammen(daglig_data)
+    print(f"Total rain: {total_regn:.1f} mm")
 
 main()
