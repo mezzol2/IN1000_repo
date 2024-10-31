@@ -1,5 +1,26 @@
 from verden import Verden
 
+#Checks if user input is an integer greater than 0
+def check_if_integer(inp):
+    #Make a list of the numbers 0 to 9 as string values
+    int_list = []
+    for i in range(10):
+        int_list.append(str(i))
+
+    #Check that only the numbers 0 to 9 are in the input
+    for character in inp:
+        if character not in int_list:
+            return False
+    
+    #Check that the input is not less than 1
+    inp = int(inp)
+    if inp < 1:
+        return False
+    
+    #Return True if all the tests were passed
+    return True
+    
+
 def hovedprogram():
    
     #Greet the user and ask them how many rows and columns the game will have
@@ -8,7 +29,16 @@ def hovedprogram():
     rader = input("Rader: ")
     kolonner = input("Kolonner: ")
     
-    #Come back to filter input
+    #Check the user's input
+    while not check_if_integer(rader):
+        print("Rad-input må være en heltall større enn 0.")
+        rader = input("Rader: ")
+    while not check_if_integer(kolonner):
+        print("Kolonn-input må være en heltall større enn 0.")
+        kolonner = input("Kolonner: ")
+
+
+    #Convert input to integer values
     rader = int(rader)
     kolonner = int(kolonner)
 
