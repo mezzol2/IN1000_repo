@@ -56,6 +56,9 @@ class Rutenett:
         for i in range(10):
             print()
         
+        #Define a string to print the matrix
+        matrix_streng = ""
+
         #Iterate through each row
         for rad in range(self._ant_rader):
             #Create an empty sting to print the contents of the row
@@ -63,8 +66,10 @@ class Rutenett:
             #Iterate through each cell in the row and add its "drawing" to the string
             for kol in range(self._ant_kolonner):
                 rad_streng += f"{self._rutenett[rad][kol].hent_status_tegn()} "
-            #Print the row to the terminal
-            print(rad_streng)
+            #Add the rad_string to the matrix_streng
+            matrix_streng += rad_streng + "\n"
+        
+        print(matrix_streng)
 
 
     def _sett_naboer(self, rad, kol):
